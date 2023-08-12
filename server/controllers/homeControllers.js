@@ -3,8 +3,8 @@ const Todo = require('../models/Todo')
 module.exports = {
     getSelf: async (req, res) => {
         try{
-            const todos = Todo.find()
-            console.log(todos)
+            const todos = await Todo.find()
+            res.json(todos)
         }catch(e){
 
         }
