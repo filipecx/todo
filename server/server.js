@@ -4,6 +4,8 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const connectDB = require('./config/db')
 
+const mainRoutes = require('./routes/mainRoutes')
+const todosRoutes = require('./routes/todosRoutes')
 
 require('dotenv').config({path: './config/.env'})
 const PORT = 3000
@@ -13,8 +15,10 @@ connectDB()
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
+app.use(express.static("public"));
 
-
+app.use('/', mainRoutes)
+app.use('/todo', todosRoutes)
 
 
 mongoose.connection.once('open', () => {
