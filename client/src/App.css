@@ -70,6 +70,16 @@ body {
   width: 300px;
   color: #fff;
 }
+.select-dia {
+  outline: none;
+  background: #1A1A40;
+  border: 1px solid #8758ff;
+  padding: 0.48rem 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 180px;
+  color: #fff;
+}
 
 .todo-btn {
   background: #8758ff;
@@ -77,7 +87,7 @@ body {
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 0.55rem;
+  padding: 0.58rem;
   cursor: pointer;
   
 }

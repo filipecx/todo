@@ -35,10 +35,11 @@ export function Home(){
         })
         setTodos(nextTodos)
     }
-    const criaTodo = (titulo) => {
+    const criaTodo = (titulo, dia) => {
 
         const nextTodos = [...todos, {
             titulo,
+            dia,
             checked: false,
             id: Math.floor(Math.random() * 1000)
         }]

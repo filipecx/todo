@@ -58,11 +58,12 @@ export function ListOfTodos(){
         })
         setTodos(nextTodos)
     }
-
-    const criaTodo = (titulo) => {
+    {/* IMPLEMENTAR ISSO AQUIEEEEEEE*/}
+    const criaTodo = (titulo, dia) => {
 
         const nextTodos = [...todos, {
             titulo,
+            dia,
             checked: false,
             id: Math.floor(Math.random() * 1000)
         }]
@@ -78,7 +79,7 @@ export function ListOfTodos(){
                     return(
                         <div key={lista.todos[index].id}>
                             <h1>{lista.usuario}</h1>
-                            <TodoList usuario={lista.usuario} todos={lista.todos} toggleCheck={toggleCheck}/>
+                            <TodoList usuario={lista.usuario} todos={lista.todos} toggleCheck={toggleCheck} criaTodo={criaTodo}/>
                         </div>                     
                     )                 
                 })

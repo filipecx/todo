@@ -3,7 +3,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faSquare as farSquare, faSquareCheck as farSquareCheck } from '@fortawesome/free-regular-svg-icons'
 
 
-export function Todo({titulo, checked, id, toggleCheck, removeTodo}){
+export function Todo({titulo, checked, id, dia, toggleCheck, removeTodo}){
         return(
                 <div className="Todo">
                         <p>{titulo}</p>
