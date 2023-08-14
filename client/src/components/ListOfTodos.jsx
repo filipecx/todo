@@ -60,7 +60,7 @@ export function ListOfTodos(){
     }
     {/* IMPLEMENTAR ISSO AQUIEEEEEEE*/}
     const criaTodo = (titulo, dia) => {
-
+        {/*
         const nextTodos = [...todos, {
             titulo,
             dia,
@@ -69,6 +69,7 @@ export function ListOfTodos(){
         }]
         
         setTodos(nextTodos)
+    */}
     }
 
     return(

@@ -8,7 +8,7 @@ export function Todo({titulo, checked, id, dia, toggleCheck, removeTodo}){
                 <div className="Todo">
                         <p>{titulo}</p>
                         <div>
-                                <button className='todo-btn' onClick={() => toggleCheck(id)}>{checked ? <FontAwesomeIcon icon={farSquareCheck} />: <FontAwesomeIcon icon={farSquare} />}</button>
+                                <button className='todo-btn' onClick={() => toggleCheck(id)}>{checked == 'true' ? <FontAwesomeIcon icon={farSquareCheck} />: <FontAwesomeIcon icon={farSquare} />}</button>
                                  
                                 <button className='todo-btn' onClick={() => removeTodo(id)}>{<FontAwesomeIcon icon={faTrash} />}</button>
                         </div>              

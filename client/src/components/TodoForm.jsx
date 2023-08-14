@@ -2,16 +2,25 @@ import { useState } from 'react'
 
 export function TodoForm({ criaTodo }){
     const [titulo, setTitulo] = useState('')
-    const [dia, setDia] = useState('')
+    const [dia, setDia] = useState('1')
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        console.log('mahoe')
+        
+        console.log(dia)
         if(!titulo) return
-        criaTodo(titulo, dia)
+        const todoId = criaId()
+        criaTodo(e,titulo, dia, todoId)
         setTitulo('')
         setDia('')
-        console.log(dia)
+        
     }
+
+    const criaId = () => {
+        const id = Math.floor(Math.random() * 1000)
+        return id
+    }
+    
     return(
         <div className='TodoForm'>
             <form onSubmit={handleSubmit}>
@@ -20,13 +29,13 @@ export function TodoForm({ criaTodo }){
                 </label>
                 <label>
                     <select className='select-dia' onChange={(e) => setDia(e.target.value)}>
-                        <option value={'segunda-feira'}>Segunda-feira</option>
-                        <option value={'terça-feira'}>Terça-feira</option>
-                        <option value={'quarta-feira'}>Quarta-feira</option>
-                        <option value={'quinta-feira'}>Quinta-feira</option>
-                        <option value={'sexta-feira'}>Sexta-feira</option>
-                        <option value={'sabado'}>Sábado</option>
-                        <option value={'domingo'}>Domingo</option>
+                        <option value={'1'} >Segunda-feira</option>
+                        <option value={'2'}>Terça-feira</option>
+                        <option value={'3'}>Quarta-feira</option>
+                        <option value={'4'}>Quinta-feira</option>
+                        <option value={'5'}>Sexta-feira</option>
+                        <option value={'6'}>Sábado</option>
+                        <option value={'0'}>Domingo</option>
                     </select>
                 </label>
                 <button type='submit' className='todo-btn'>Add</button>
